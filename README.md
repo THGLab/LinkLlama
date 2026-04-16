@@ -1,2 +1,2 @@
 # LinkLlama
-Official Code Repo for LinkLlama
+Official Code Repo for LinkLlama. More coming soon...
