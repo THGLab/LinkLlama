@@ -1,0 +1,3 @@
+name,fragments,distance_angstrom,angle_degrees
+1k_zinc_hard_0,Cc1ccc([*:2])cc1C.O=C(Cc1ccccc1)N[*:1],4.770215704349994,154.4547402932363
+1k_zinc_hard_1,Fc1ccc([*:2])cc1F.c1cn2c([nH+]1)C[C@@H]([*:1])CC2,4.473442711405773,106.83381470818512

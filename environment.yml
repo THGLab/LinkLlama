@@ -1,0 +1,19 @@
+name: linkllama
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python>=3.10,<3.13
+  - pip
+  - pip:
+      # Pinned ranges for reproducibility; relax if needed for your CUDA torch build.
+      - rdkit>=2023.9
+      - numpy>=1.24,<3
+      - pandas>=2,<3
+      - tqdm>=4.65
+      - pyyaml>=6
+      - useful_rdkit_utils>=0.4
+      - torch>=2.1,<3
+      - transformers>=4.40
+      - pyflakes>=3
+      - spyrmsd>=0.4

@@ -1,0 +1,42 @@
+# Inference configuration for LinkLlama
+# Aligned with linkllama/llm/sft_corpus.py prompt options.
+#
+# Input can be:
+#   - CSV file with columns: fragments, distance_angstrom, angle_degrees
+#   - SDF file(s) containing two fragments with dummy atoms (geometry is calculated)
+#
+# Only fragment info (SMILES, distance, angle) is extracted from the input.
+# All property constraints below are specified in the prompt to guide generation.
+
+prompt:
+  # Linker properties (must match sft_corpus.generate_linker_properties / generate_linker_type)
+  linker_type: null  # "chain", "branched", "ring-containing", or null for unconditional
+  rotb_range: null   # ">= 4", ">= 3", ">= 2", ">= 1", "0", or null
+  heavy_atoms_range: null  # ">= 10", ">= 7", ">= 6", ">= 5", ">= 4", ">= 3", or null
+
+  # Molecule properties (must match sft_corpus.generate_molecule_properties)
+  hbd_range: null    # "> 5", "<= 5", "<= 3", "<= 2", "<= 1", or null
+  hba_range: null    # "> 10", "<= 10", "<= 7", "<= 5", "<= 3", or null
+  mw_range: null     # "> 700", "<= 700", "<= 600", "<= 500", "<= 400", "<= 300", or null
+  logp_range: null   # "> 6", "<= 6", "<= 5", "<= 4", "<= 3", "< 0", or null
+  tpsa_range: null   # "> 200", "<= 200", "<= 140", "<= 90", or null
+
+  # Reasonability (must match sft_corpus.get_reasonability_and_reasoning: "reasonable" | "unreasonable")
+  reasonability: "reasonable"  # "reasonable" or "unreasonable"
+
+sampling:
+  # Hugging Face Hub (cap-50 merged weights)
+  model_path: THGLab/Llama-3.2-1B-Instruct-LinkLlama-Cap50
+  num_samples: 100
+  # Generation randomness (fixed defaults for LinkLlama; not overridable from CLI).
+  # temperature: scales logits before softmax — higher values mean more diverse token draws at each step.
+  temperature: 1.4
+  # top_p: nucleus sampling — only tokens whose cumulative probability mass reaches top_p are kept;
+  # values near 1.0 keep almost the full distribution while still truncating the long tail.
+  top_p: 0.99
+  max_length: 1600
+
+output:
+  output_path: null
+  output_suffix: "_results"
+  output_dir: ./inference_outputs
