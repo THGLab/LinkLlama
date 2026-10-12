@@ -2,7 +2,7 @@
 
 [![License: UC Regents](https://img.shields.io/badge/License-UC%20Regents-informational?style=flat-square)](LICENSE)
 [![Figshare — benchmark & ChEMBL](https://img.shields.io/badge/Figshare-benchmark%20%26%20ChEMBL-EC9126?style=flat-square&logo=figshare&logoColor=white)](https://doi.org/10.6084/m9.figshare.32049072)
-[![bioRxiv](https://img.shields.io/badge/bioRxiv-2026.04.15.718690-b31b1b?style=flat-square)](https://www.biorxiv.org/content/10.64898/2026.04.15.718690v1)
+[![JCIM](https://img.shields.io/badge/JCIM-10.1021%2Facs.jcim.6c01261-b31b1b?style=flat-square)](https://doi.org/10.1021/acs.jcim.6c01261)
 [![Hugging Face](https://img.shields.io/badge/🤗_Model-THGLab%2FLlama--3.2--1B--Instruct--LinkLlama--Cap50-FFD21F?style=flat-square&logo=huggingface)](https://huggingface.co/THGLab/Llama-3.2-1B-Instruct-LinkLlama-Cap50)
 
 ---
